@@ -12,6 +12,7 @@ jobs:
       - run: echo 'doing release thing'
       - name: test exit
         shell: bash
+        if: 1 == 2
         run: |
           echo 'oiasdjf'
           exit 0
