@@ -10,3 +10,4 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - run: echo 'doing release thing'
+      - run: echo ${{ github.event_name }}
