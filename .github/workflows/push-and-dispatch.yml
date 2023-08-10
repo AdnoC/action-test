@@ -10,4 +10,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - run: echo 'doing release thing'
+      - run: |
+        echo 'oiasdjf'
+        exit 0
       - run: echo ${{ github.event_name }}
