@@ -1,0 +1,12 @@
+name: Create release candidate PR
+
+on:
+  - pull_request
+  - workflow_dispatch
+
+jobs:
+  create_release:
+    name: Create release
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo 'doing release thing'
