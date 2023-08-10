@@ -1,7 +1,8 @@
 name: Create release candidate PR
 
 on:
-  pull_request
+  - pull_request
+  - workflow_dispatch
 
 jobs:
   create_release:
