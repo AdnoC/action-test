@@ -1,8 +1,8 @@
 name: Create release candidate PR
 
 on:
- schedule:
-   - cron: '* * * * *'
+# schedule:
+#   - cron: '* * * * *'
  workflow_dispatch:
 
 
