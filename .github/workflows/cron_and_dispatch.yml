@@ -1,0 +1,23 @@
+name: Create release candidate PR
+
+on:
+ workflow_dispatch:
+ schedule:
+   - cron: '15 * * * *'
+
+
+jobs:
+  create_release:
+    name: Create release
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo 'doing release thing'
+      - name: test exit
+        shell: bash
+        if: 1 == 2
+        run: |
+          echo 'oiasdjf'
+          exit 0
+      - run: echo value=$(test ${{ github.event_name }} != schedule && echo true || echo false) >> "$GITHUB_OUTPUT"
+        id: is-workflow
+      - run: echo ${{ steps.is-workflow.outputs.value }}
