@@ -15,7 +15,7 @@ jobs:
       - run: echo 'doing release thing'
       - name: test exit
         shell: bash
-        if: ${{ github.event_name }} == pull_request
+        if: ${{ github.event_name == "pull_request" }}
         run: |
           echo ${{ github.event_name }}
           echo 'oiasdjf'
