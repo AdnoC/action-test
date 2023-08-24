@@ -17,6 +17,7 @@ jobs:
         shell: bash
         if: ${{ github.event_name }} == "pull_request"
         run: |
+          echo ${{ github.event_name }}
           echo 'oiasdjf'
           exit 0
       - run: echo value=$(test ${{ github.event_name }} != schedule && echo true || echo false) >> "$GITHUB_OUTPUT"
