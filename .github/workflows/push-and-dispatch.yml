@@ -3,6 +3,9 @@ name: Create release candidate PR
 on:
   - pull_request
   - workflow_dispatch
+  - schedule:
+    - cron: '* * * * *'
+
 
 jobs:
   create_release:
@@ -16,6 +19,6 @@ jobs:
         run: |
           echo 'oiasdjf'
           exit 0
-      - run: echo value=$(test ${{ github.event_name }} != workflow_dispatch && echo true || echo false) >> "$GITHUB_OUTPUT"
+      - run: echo value=$(test ${{ github.event_name }} != schedule && echo true || echo false) >> "$GITHUB_OUTPUT"
         id: is-workflow
       - run: echo ${{ steps.is-workflow.outputs.value }}
