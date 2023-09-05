@@ -2,7 +2,7 @@
 name: DevHub Accessibility Violation
 about: Document an accessibility violation to be fixed
 title: '[A11Y] '
-labels: ['jazzband' 'team-api', 'PROD: axe-devhub', 'QA: required', 'TYPE: QA Bug']
+labels: ['jazzband', 'team-api', 'PROD: axe-devhub', 'QA: required', 'TYPE: QA Bug']
 assignees: ''
 ---
 
