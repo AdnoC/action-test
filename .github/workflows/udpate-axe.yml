@@ -13,7 +13,6 @@ jobs:
           node-version: 16
       - name: Update axe-core
         uses: dequelabs/update-axe-core@feat-useful-error-on-no-axe
-        continue-on-error: true
         id: update
       - name: Print Results of UAC
         run: |
