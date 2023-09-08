@@ -1,0 +1,19 @@
+name: Update axe-core
+on:
+  pull_request:
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+      - uses: actions/setup-node@v3
+        with:
+          node-version: 16
+      - name: Update axe-core
+        uses: dequelabs/update-axe-core@feat-useful-error-on-no-axe
+        id: update
+      - name: Print Results of UAC
+        run: |
+          echo "Updated axe-core to v${{ steps.update.outputs.version }}"
